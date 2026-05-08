@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend activo</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #eee;
+        }
+        .card {
+            background: #16213e;
+            border: 1px solid #0f3460;
+            border-radius: 12px;
+            padding: 40px 50px;
+            text-align: center;
+            max-width: 480px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 16px; color: #e94560; }
+        p  { margin: 8px 0; font-size: 0.95rem; color: #a8a8b3; }
+        .status {
+            margin: 24px auto;
+            display: inline-block;
+            background: #0f3460;
+            color: #4ecca3;
+            font-weight: bold;
+            padding: 10px 28px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .footer {
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+        .endpoints { text-align: left; margin-top: 20px; }
+        .endpoints h3 { font-size: 0.85rem; color: #4ecca3; margin-bottom: 8px; }
+        .endpoints ul { list-style: none; }
+        .endpoints li {
+            font-size: 0.8rem;
+            color: #a8a8b3;
+            padding: 3px 0;
+            font-family: monospace;
+        }
+        .method { display: inline-block; width: 50px; font-weight: bold; }
+        .get    { color: #61affe; }
+        .post   { color: #49cc90; }
+        .put    { color: #fca130; }
+        .delete { color: #f93e3e; }
+    </style>
+</head>
+<body>
+<main class="card">
+    <h1> Servidor Backend Activo</h1>
+    <p>La aplicación Spring Boot está en ejecución y esperando solicitudes.</p>
+    <p>Si ves esta página, el backend se inició correctamente.</p>
+
+    <div class="status">● Estado: En línea</div>
+
+    <div class="endpoints">
+        <h3>Endpoints disponibles — /countries</h3>
+        <ul>
+            <li><span class="method get">GET</span> /countries</li>
+            <li><span class="method get">GET</span> /countries?name={patron}</li>
+            <li><span class="method get">GET</span> /countries/{id}</li>
+            <li><span class="method post">POST</span> /countries</li>
+            <li><span class="method put">PUT</span> /countries/{id}</li>
+            <li><span class="method delete">DEL</span> /countries/{id}</li>
+        </ul>
+    </div>
+
+    <div class="footer">API disponible para el frontend SPA — Puerto 8080</div>
+</main>
+</body>
+</html>
