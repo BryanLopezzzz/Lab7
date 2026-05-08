@@ -1,0 +1,9 @@
+echo "target/
+*.class
+.dotnet/
+AppData/
+RiderProjects/
+Downloads/
+*.iml
+.idea/
+node_modules/" > .gitignore
